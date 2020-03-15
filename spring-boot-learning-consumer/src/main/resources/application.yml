@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: consumer-server #定义服务名称
+server:
+  port: 8763
+  context-path: /consumer
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/eureka
+
+app:
+  #项目名称，与apollo后台管理配置的appId相同
+  id: spring-boot-learning-consumer
+apollo:
+  bootstrap:
+    enabled: true
+    #要导入的配置文件名称 多个用逗号连接
+    namespaces: application
+    eagerLoad:
+      enabled: true
+  #以下是本地启动需要的配置
+  meta: http://localhost:8080
+  cacheDir: ./
