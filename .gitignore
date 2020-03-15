@@ -29,3 +29,13 @@ build/
 
 ### VS Code ###
 .vscode/
+/.mvn/
+/logs/
+.mvn/
+logs/
+mvnw
+mvnw.cmd
+*/.mvn/
+*/mvnw
+*/cmd
+*/config-cache/
